@@ -1,33 +1,34 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Results from "./Results";
 import "./Dictionary.css";
 
 // let apikey from map = "eb1733f56daae1f8c299ea8db424ea64";
 //https://api.dictionaryapi.dev/api/v2/entries/en_UK/hello
 //Your API key from https://www.pexels.com/: 563492ad6f917000010000010c07d0b470024e508205a11acb696a0a
 
-
 export default function Dictionary(props) {
     let [searchWord, setSearchWord] = useState(props.defaultTerm);
-    let [data, setData] = useState(null);
     let [photos, setPhotos] = useState(null);
-    
+    let [results, setResults] = useState(null);
+
     function handSearchChange(event) {
     setSearchWord(event.target.value);
     }
     
     function handResponse(response) {
-    setData(response.data[0]);
+    setResults(response.data[0]);
     }
 
     function handPexelsResponse(response) {
     setPhotos(response.data.photos);
-  }
+    }
 
     function search(event) {
+        event.preventDefault();
         // alert(`you are searching for ${searchWord}`);
         // dictionary api documentation: https://dictionaryapi.dev/
-        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_UK/${searchWord}`;
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`;
         axios.get(apiUrl).then(handResponse);
 
         //  pexels api documentation: https://www.pexels.com/api/documentation/
@@ -39,10 +40,11 @@ export default function Dictionary(props) {
   }
 
     return (
-        <div classname="Dictionary">
+        <div className="Dictionary">
             <form onSubmit={search}>
             <input type="search" onChange={handSearchChange} placeholder="Please enter your word here 🪄 "/>
             </form>
+            <Results results={results}/>
             </div>
     );
 }
