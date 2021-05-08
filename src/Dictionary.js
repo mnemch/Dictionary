@@ -32,11 +32,11 @@ export default function Dictionary(props) {
         axios.get(apiUrl).then(handResponse);
 
         //  pexels api documentation: https://www.pexels.com/api/documentation/
-        let pexelsApiKey ="563492ad6f917000010000010c07d0b470024e508205a11acb696a0a";
-        let pexelsUrl = `https://api.pexels.com/v1/search?query=${searchWord}&per_page=2`;
-    axios
-      .get(pexelsUrl, { headers: { Authorization: `Bearer ${pexelsApiKey}` } })
-      .then(handPexelsResponse);
+    //     let pexelsApiKey ="563492ad6f917000010000010c07d0b470024e508205a11acb696a0a";
+    //     let pexelsUrl = `https://api.pexels.com/v1/search?query=${searchWord}&per_page=2`;
+    // axios
+    //   .get(pexelsUrl, { headers: { Authorization: `Bearer ${pexelsApiKey}` } })
+    //   .then(handPexelsResponse);
   }
 
     return (
