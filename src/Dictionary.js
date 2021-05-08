@@ -9,7 +9,7 @@ import "./Dictionary.css";
 
 export default function Dictionary(props) {
     let [searchWord, setSearchWord] = useState(props.defaultTerm);
-    let [photos, setPhotos] = useState(null);
+    // let [photos, setPhotos] = useState(null);
     let [results, setResults] = useState(null);
 
     function handSearchChange(event) {
@@ -20,9 +20,9 @@ export default function Dictionary(props) {
     setResults(response.data[0]);
     }
 
-    function handPexelsResponse(response) {
-    setPhotos(response.data.photos);
-    }
+    // function handPexelsResponse(response) {
+    // setPhotos(response.data.photos);
+    // }
 
     function search(event) {
         event.preventDefault();
