@@ -28,6 +28,7 @@ export default function Dictionary(props) {
         event.preventDefault();
         // alert(`you are searching for ${searchWord}`);
         // dictionary api documentation: https://dictionaryapi.dev/
+        // https://api.dictionaryapi.dev/api/v2/entries/en_US/hello 
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`;
         axios.get(apiUrl).then(handResponse);
 
