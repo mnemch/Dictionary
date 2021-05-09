@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <div className="container">
         <Header className="Header"/>
-        <div className="card">
-          <Dictionary defaultTerm="Hello" />
+        <div >
+          <Dictionary defaultTerm="Golf" />
         </div>
         <Footer />
       </div>

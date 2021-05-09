@@ -12,14 +12,30 @@ body {
   font-family: "SansSerif";
 }
 h1 {
-  font-size: 50px;
+  font-size: 55px;
+  font-weight: bold;
+  padding: 13px;
 }
+.Word:hover {
+  color: #198753;
+  font-weight: bold;
+}
+
 h4 {
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
 }
 h4:hover {
-  color: #df7861;
+  color: #198753;
+  font-weight: bold;
+}
+h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+h3:hover {
+  color: #198753;
   font-weight: bold;
 }
 
@@ -35,7 +51,7 @@ a {
   font-size: 15px;
 }
 a:hover {
-  color: #df7861;
+  color: #198753;
   text-decoration: none;
   font-weight: bold;
 }
@@ -44,10 +60,30 @@ a:hover {
   font-weight: bold;
 }
 .card {
-  border: 3px solid #004a7c;
+  border: 4px solid #004a7c;
   border-radius: 10px;
   color: #004a7c;
   margin: 15px auto;
   max-width: 900px;
   padding: 20px 30px;
+}
+
+.searchline {
+  margin: 5px auto;
+  background: #fafafa;
+  padding: 7px;
+  padding-left: 45px;
+  max-width: 660px;
+  width: 90%;
+  border: 1px solid #004a7c;
+  border-radius: 5px;
+}
+
+.Phonetics {
+  margin-top: 7px;
+  margin-bottom: 10px;
+}
+
+img {
+  border-radius: 5px;
 }

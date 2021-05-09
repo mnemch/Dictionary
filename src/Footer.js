@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Footer() {
   return (
@@ -6,12 +7,12 @@ export default function Footer() {
     <div className="hellohi">
         <div className="Name">
         <a href="https://github.com/mnemch/Dictionary" target="_blank" rel="noreferrer">
-            Open-source code {""}
+            Open-source code {""} <FontAwesomeIcon icon="github"/> 
         </a>
         by Mariia Nemchinova
         </div>
-        <a href="https://www.linkedin.com/in/mariia-nemchinova-693609110/" target="_blank" rel="noreferrer"> Linkedin </a>
-        <a href="https://twitter.com/Maria91259872" target="_blank" rel="noreferrer"> Twitter </a>
+        <a href="https://www.linkedin.com/in/mariia-nemchinova-693609110/" target="_blank" rel="noreferrer"> <i class="fab fa-linkedin-in"></i> Linkedin </a>
+        <a href="https://twitter.com/Maria91259872" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i> Twitter </a>
         <a href="https://www.pexels.com"> Pexel </a>
         <br />
         {/* add trabslation sp language */}
