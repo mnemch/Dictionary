@@ -11,6 +11,7 @@ export default function Dictionary(props) {
     let [searchWord, setSearchWord] = useState(props.defaultTerm);
     // let [photos, setPhotos] = useState(null);
     let [results, setResults] = useState(null);
+    let [loaded, setLoaded] = useState(false);
 
     function handSearchChange(event) {
     setSearchWord(event.target.value);
@@ -39,13 +40,26 @@ export default function Dictionary(props) {
     //   .get(pexelsUrl, { headers: { Authorization: `Bearer ${pexelsApiKey}` } })
     //   .then(handPexelsResponse);
   }
+    function load() {
+    setLoaded(true);
+    search();
+  } 
 
+  if (loaded) {
     return (
         <div className="Dictionary">
+            <section>
             <form onSubmit={search}>
             <input type="search" onChange={handSearchChange} placeholder="Please enter your word here 🪄 "/>
             </form>
+            </section>
+   
             <Results results={results}/>
+
             </div>
     );
+  } else {
+      load();
+      return null;
+  }
 }
