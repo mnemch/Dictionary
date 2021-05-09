@@ -27,13 +27,10 @@ export default function Dictionary(props) {
     }
 
     function search(event) {
-        
-        // alert(`you are searching for ${searchWord}`);
         // dictionary api documentation: https://dictionaryapi.dev/
         // https://api.dictionaryapi.dev/api/v2/entries/en_US/hello 
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`;
         axios.get(apiUrl).then(handResponse);
-
          // pexels api documentation: https://www.pexels.com/api/documentation/
         let pexelsApiKey ="563492ad6f917000010000010c07d0b470024e508205a11acb696a0a";
         let pexelsUrl = `https://api.pexels.com/v1/search?query=${searchWord}&per_page=2`;
@@ -49,14 +46,21 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
         <div className="Dictionary">
+             <div className="row">
+            <div className="col-8" >
             <section>
             <form onSubmit={search}>
             <input type="search" onChange={handSearchChange} placeholder="Please enter your word here 🪄 "/>
             </form>
             </section>
+            </div>
             <Results results={results}/>
-            <br/>
+            <div className="row">
+            <div className="col-4" >
             <Photos photos={photos} alt={searchWord}/>
+            </div>
+            </div>
+            </div>
             </div>
     );
   } else {

@@ -10,7 +10,7 @@ export default function Photos(props) {
               <div className="col-3" key={index}>
                 <a href={photo.src.original} target="_blank" rel="noreferrer">
                   <img
-                    src={photo.src.tiny}
+                    src={photo.src.original}
                     className="img-fluid"
                     alt={props.searchWord}
                   ></img>
