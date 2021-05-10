@@ -11,7 +11,7 @@ export default function Footer() {
         </a>
         by Mariia Nemchinova
         </div>
-        <a href="https://www.linkedin.com/in/mariia-nemchinova-693609110/" target="_blank" rel="noreferrer"> <i class="fab fa-linkedin-in"></i> Linkedin </a>
+        <a href="https://www.linkedin.com/in/mariia-nemchinova-693609110/" target="_blank" rel="noreferrer"> <i class="fab fa-linkedin-in"></i> Linkedln </a>
         <a href="https://twitter.com/Maria91259872" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i> Twitter </a>
         <a href="https://www.pexels.com"> Pexel </a>
         <br />
